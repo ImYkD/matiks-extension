@@ -1,0 +1,196 @@
+body {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: #111827;
+  color: #edf2f7;
+  width: 420px;
+}
+
+.app-shell {
+  padding: 16px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.app-header h1 {
+  margin: 2px 0 0;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.eyebrow {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+}
+
+.status-pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #372f46;
+  color: #cbd5e1;
+  border: 1px solid #4b5563;
+  font-size: 11px;
+}
+
+.card {
+  background: #1f2937;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header h2 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #4338ca;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #101827;
+  color: #f8fafc;
+  padding: 9px 10px;
+  font-size: 12px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.options-grid {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.check-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-row input {
+  width: auto;
+}
+
+.action-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 9px 10px;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: #8b5cf6;
+  color: white;
+}
+
+.secondary-button {
+  background: #374151;
+  color: #e2e8f0;
+}
+
+.friend-list {
+  max-height: 210px;
+  overflow: auto;
+  margin-top: 8px;
+  color: #cbd5e1;
+}
+
+.friend-list .empty-state {
+  display: inline-block;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.friend-list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #334155;
+  padding: 6px 0;
+  font-size: 11px;
+}
+
+.friend-list-row:last-child {
+  border-bottom: 0;
+}
+
+.friend-list-row .friend-user-id {
+  color: #e2e8f0;
+  font-family: "Consolas", monospace;
+}
+
+.friend-list-row .friend-last-played {
+  color: #94a3b8;
+}
+
+.status-log {
+  font-family: "Consolas", monospace;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #9ca3af;
+  min-height: 44px;
+  white-space: pre-wrap;
+}
+
+.compact-card {
+  margin-bottom: 0;
+}

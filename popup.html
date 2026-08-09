@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matiks Control Center</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <div class="eyebrow">Matiks Extension</div>
+        <h1>Friend Ops</h1>
+      </div>
+      <span class="status-pill" id="connection-status">Disconnected</span>
+    </header>
+
+    <section class="card">
+      <div class="card-header">
+        <span class="icon">⚙️</span>
+        <h2>Unfriend Filters</h2>
+      </div>
+
+      <div class="field-group">
+        <label for="authorization-token">Authorization token</label>
+        <input id="authorization-token" type="text" placeholder="Bearer token" autocomplete="off" />
+      </div>
+
+      <div class="grid-two">
+        <div class="field-group">
+          <label for="max-friends">Maximum friends</label>
+          <input id="max-friends" type="number" min="1" value="300" />
+        </div>
+        <div class="field-group">
+          <label for="request-delay">Delay between removals (ms)</label>
+          <input id="request-delay" type="number" min="1000" value="1500" />
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="inactive-days">Remove if not played in last (days)</label>
+        <input id="inactive-days" type="number" min="1" value="30" />
+      </div>
+
+      <div class="field-group">
+        <label for="include-ids">Friend IDs to include</label>
+        <textarea id="include-ids" rows="4" placeholder="one friend id per line"></textarea>
+      </div>
+
+      <div class="field-group">
+        <label for="exclude-ids">Friend IDs to exclude</label>
+        <textarea id="exclude-ids" rows="4" placeholder="one friend id per line"></textarea>
+      </div>
+
+      <div class="options-grid">
+        <label class="check-row">
+          <input id="dry-run" type="checkbox" checked />
+          <span>Dry-run preview</span>
+        </label>
+        <label class="check-row">
+          <input id="reverse-filter" type="checkbox" />
+          <span>Reverse selection</span>
+        </label>
+      </div>
+
+      <div class="action-row">
+        <button id="load-friends" class="secondary-button">Load Friend IDs</button>
+        <button id="preview-unfriend" class="secondary-button">Preview</button>
+        <button id="run-unfriend" class="primary-button">Execute Unfriend</button>
+      </div>
+    </section>
+
+    <section class="card compact-card">
+      <div class="card-header">
+        <span class="icon">�</span>
+        <h2>Loaded Friends</h2>
+      </div>
+      <div id="friend-list" class="friend-list">
+        <span class="empty-state">No friend list loaded</span>
+      </div>
+    </section>
+
+    <section class="card compact-card">
+      <div class="card-header">
+        <span class="icon">�📄</span>
+        <h2>Task Console</h2>
+      </div>
+      <div id="status-log" class="status-log">
+        Ready
+      </div>
+    </section>
+  </div>
+
+  <script src="matiks-client.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

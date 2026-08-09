@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Matiks Control Center",
+  "version": "0.1.0",
+  "description": "Browser extension utilities for Matiks workflows and API automation.",
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://server.matiks.com/*",
+    "https://server.matiks.org/*",
+    "https://matiks.com/*",
+    "https://www.matiks.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Matiks Control Center",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://matiks.com/*",
+        "https://www.matiks.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
