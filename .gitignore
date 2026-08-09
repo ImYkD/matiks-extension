@@ -1,0 +1,7 @@
+# Sensitive API artifacts captured from the live browser devtools
+friendListRequest.json
+friendListResponse.json
+
+# Local/temporary runtime payloads
+.DS_Store
+*.log
